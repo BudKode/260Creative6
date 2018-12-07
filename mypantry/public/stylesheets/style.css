@@ -1,8 +1,21 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #ffe8cc;
 }
 
 a {
+  padding: 20px;
   color: #00B7FF;
+}
+
+#header-bar a {
+  float: right;
+}
+
+/*#welcome-landing {*/
+/*  padding: 50px;*/
+/*}*/
+
+#main-body {
+  padding: 50px;
 }
