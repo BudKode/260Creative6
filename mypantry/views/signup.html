@@ -12,23 +12,29 @@
         <a style="color:#995400" class="navbar-brand">MyPantry</a>
     </nav>
     <div id="main-body">
-    <div class="form-container">
-        <h2>Sign Up!</h2>
-        <form method="POST" action="/signup">
-            <label>Username:</label>
-            <input type="text" id="username" name="username"><br>
-            <label>Password:</label>
-            <input type="password" id="password" name="password"><br>
-            <label>Email:</label>
-            <input type="email" id="email" name="email"><br>
-            <input type="submit" id="register" value="Register">
-        </form>
-    </div>
-    </div>
-    <hr>
-    <div class="text-center">
-        <p>Returning User?</p>
-        <a id="logInLink" href="/login">Log in!</a>
+        <div class="row">
+            <div class="col-3"></div>
+            <div id="floating-module" class="col-6 container-fluid text-center">
+                <div class="form-container">
+                    <h2>Sign Up!</h2>
+                    <form method="POST" action="/signup">
+                        <label>Username:</label>
+                        <input type="text" id="username" name="username"><br>
+                        <label>Password:</label>
+                        <input type="password" id="password" name="password"><br>
+                        <label>Email:</label>
+                        <input type="email" id="email" name="email"><br>
+                        <input type="submit" id="register" value="Register">
+                    </form>
+                </div>
+                <hr>
+                <div class="text-center">
+                    <p>Returning User?</p>
+                    <a id="logInLink" href="/login">Log in!</a>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
     </div>
     <hr>
     <div id="signupMsg" class="text-center">

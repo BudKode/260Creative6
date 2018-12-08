@@ -4,12 +4,36 @@ body {
 }
 
 a {
-  padding: 20px;
   color: #00B7FF;
 }
 
 #header-bar a {
+  height: 50px;
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px; 
   float: right;
+}
+
+#floating-module {
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px; 
+}
+
+#carousel {
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.carousel-caption {
+  border-radius: 25px;
+  color:#FF8C00;
+  background-color: #ffffff;
+}
+
+#carousel-inner {
+  border-radius: 25px;
 }
 
 /*#welcome-landing {*/
