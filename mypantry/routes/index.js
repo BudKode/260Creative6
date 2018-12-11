@@ -12,7 +12,9 @@ router.get('/', function(req, res){
       console.log("/ Route if user");
       res.render('index', {username: req.session.username,
                            msg:req.session.msg,
-                           color:req.session.color});
+                           color:req.session.color,
+                          recipes: req.session.recipes
+      });
     } else {
       console.log("/ Route else user");
       req.session.msg = 'Access denied!';
@@ -50,6 +52,7 @@ router.get('/logout', function(req, res){
   });
 router.post('/signup', users.signup);
 router.post('/user/update', users.updateUser);
+router.post('/user/updateRecipes', users.updateUserRecipes);
 router.post('/user/delete', users.deleteUser);
 router.post('/login', users.login);
 router.get('/user/profile', users.getUserProfile);

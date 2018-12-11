@@ -7,12 +7,12 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
         
-<body>  
+<body style="font-family: helvetica; background-color: white;">  
     <nav id='header-bar' class="navbar navbar-expand-lg navbar-dark" style="background-color: #FF8C00;" ng-controller="myController" >
-        <a style="color:#995400" class="navbar-brand">MyPantry</a>
+        
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" style="color:#995400"href="/">Home <span class="sr-only">(current)</span></a>
+            <a style="color:white; background-color: #FF8C00;"href="/">Home <span class="sr-only">(current)</span></a>
           </li>
         </ul>
         <span class="nav-item dropdown">
@@ -27,8 +27,7 @@
             <input type="text" id="username" name="username" ng-model="user.username" disabled><br>
             <label>Email:</label>
             <input type="email" id="email" name="email" ng-model="user.email"><br>          
-            <label>Favorite Color:</label>
-            <input type="text" id="color" name="color" ng-model="user.color"><br>   
+               
             <input type="submit" id="save" value="Save">
         </form>
     </div>

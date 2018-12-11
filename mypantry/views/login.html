@@ -7,21 +7,20 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
         
-<body>  
-    <nav id='header-bar' class="navbar navbar-expand-lg navbar-dark" style="background-color: #FF8C00" ng-controller="myController" >
-        <a style="color:#995400" class="navbar-brand">MyPantry</a>
+<body style="font-family: helvetica; background-color: white;">  
+    <nav id='header-bar' style="padding: 30px;background-color: #FF8C00; width: 100%; height: 120px;display: flex; align-items: center;" ng-controller="myController" >
+        <div style="color: white; background-color: none; font-size: 2em;">My Pantry</a>
     </nav>
-    <div id="main-body">
-        <div class="row">
-            <div class="col-3" id="floating-module" style="margin-right:-40px">
+    <div style='padding: 30px; '>
+        <div style="width: 100%; display: flex; flex-direction: row; justify-content: space-between;">
+            <div id="floating-module" style="border-radius:4px; box-shadow: 0 1px 7px #999; width: 26%">
                 <h2>Welcome to MyPantry!</h2>
-                <p>With a MyPantry Account, you can browse and save recipes, populate weekly meal plans, and even generate your shopping list!</p>
+                <p>With a MyPantry Account, you can save all your recipes in one place and access them wherever you are!</p>
                 <p>Sign up or sign in to get started!</p>
             </div>
-            <div class="col-1"></div>
-            <div class="col-5" id="floating-module" style="margin-left:-20px">
-                <h2>Sign in to start borwsing!</h2>
-                <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div id="floating-module" style="border-radius:4px; box-shadow: 0 1px 7px #999;width: 40%;">
+                <h2>Sign in to get started!</h2>
+                <div id="carousel" class="carousel slide" data-ride="carousel" style="">
                   <ol class="carousel-indicators">
                     <li data-target="#carousel" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel" data-slide-to="1"></li>
@@ -29,13 +28,19 @@
                   </ol>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img class="d-block w-100 img-rounded" src="https://tse3.mm.bing.net/th?id=OIP.Z_SU9GxmHhn4Iw0w1A4vhwHaE6&pid=Api" style="rounded" alt="First slide">
+                        <div style="height: 60%, overflow: hidden;">
+                          <img style="height: 60%, overflow: hidden;"class="d-block w-100 img-rounded" src="https://tse3.mm.bing.net/th?id=OIP.Z_SU9GxmHhn4Iw0w1A4vhwHaE6&pid=Api" style="rounded" alt="First slide">
+                        </div>
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-100" src="https://tse1.mm.bing.net/th?id=OIP.AXl03hyLC519crV-om4e5AHaE6&pid=Api" style="rounded" alt="Second slide">
+                      <div style="height: 60%, overflow: hidden;">
+                          <img style="height: 60%, overflow: hidden;"class="d-block w-100" src="https://tse1.mm.bing.net/th?id=OIP.AXl03hyLC519crV-om4e5AHaE6&pid=Api" style="rounded" alt="Second slide">
+                        </div>
                     </div>
                     <div class="carousel-item">
-                      <img class="d-block w-100" src="https://d1alt1wkdk73qo.cloudfront.net/images/guide/337cf984f47f4783b7b6208aa5a0137a/640x478_ac.jpg" style="rounded" alt="Third slide">
+                      <div style="height: 60%, overflow: hidden;">
+                          <img style="height: 60%, overflow: hidden;"class="d-block w-100" src="https://d1alt1wkdk73qo.cloudfront.net/images/guide/337cf984f47f4783b7b6208aa5a0137a/640x478_ac.jpg" style="rounded" alt="Third slide">
+                        </div>
                     </div>
                   </div>
                   <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -48,7 +53,7 @@
                   </a>
                 </div>
             </div>
-            <div id="floating-module" class="col-3 container-fluid text-right" style="margin-left:60px">
+            <div id="floating-module" style="border-radius:4px; box-shadow: 0 1px 7px #999;width: 26%;">
                 <h2 class="text-center">Returning User?</h2>
                 <div class="form-container">
                     <form method="POST" action="/login">

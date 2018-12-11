@@ -13,6 +13,7 @@ exports.signup = function(req, res){
   console.log("after hashing user exports.signup");
   user.set('email', req.body.email);
   console.log("after email user exports.signup");
+  user.set('recipes', [{title: 'test recipe', ingredients: 'ingredients', directions: 'directions'}])
   user.save(function(err) {
     console.log("In exports.signup");
     console.log(err);
@@ -75,6 +76,25 @@ exports.updateUser = function(req, res){
       } else {
         req.session.msg = 'User Updated.';
         req.session.color = req.body.color;
+      }
+      res.redirect('/user');
+    });
+  });
+};
+exports.updateUserRecipes = (req, res) => {
+  User.findOne({ _id: req.session.user })
+  .exec(function(err, user) {
+    var newRecipe = {
+      title: req.body.title, 
+    }
+    user.set('recipes', user.recipes.concat(newRecipe));
+    console.log(user)
+    user.save(function(err) {
+      if (err){
+        res.sessor.error = err;
+      } else {
+        req.session.msg = 'User Updated.';
+        req.session.recipes = user.recipes
       }
       res.redirect('/user');
     });

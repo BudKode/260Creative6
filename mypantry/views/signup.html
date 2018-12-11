@@ -7,15 +7,15 @@
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
 </head>
         
-<body>  
-    <nav id='header-bar' class="navbar navbar-expand-lg navbar-dark" style="background-color: #FF8C00;" ng-controller="myController" >
-        <a style="color:#995400" class="navbar-brand">MyPantry</a>
+<body style="font-family: helvetica; background-color: white;">  
+   <nav id='header-bar' style="padding: 30px;background-color: #FF8C00; width: 100%; height: 120px;display: flex; align-items: center;" ng-controller="myController" >
+        <div style="color: white; background-color: none; font-size: 2em;">My Pantry</a>
     </nav>
     <div id="main-body">
         <div class="row">
             <div class="col-3"></div>
             <div id="floating-module" class="col-6 container-fluid text-center">
-                <div class="form-container">
+                <div class="form-container" style="border-radius:4px; box-shadow: 0 1px 7px #999;width: 300px;padding: 30px;">
                     <h2>Sign Up!</h2>
                     <form method="POST" action="/signup">
                         <label>Username:</label>
