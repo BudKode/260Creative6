@@ -5,11 +5,11 @@ angular.module('myApp', []).
         .success(function(data, status, headers, config) {
       $scope.user = data;
       $scope.error = "";
-      $scope.recipes = data.recipes
+      $scope.recipes = data.recipes;
     }).
     error(function(data, status, headers, config) {
       $scope.user = {};
-      $scope.recipes = []
+      $scope.recipes = [];
       $scope.error = data;
     });
   }]);
