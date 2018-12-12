@@ -82,11 +82,13 @@ exports.updateUser = function(req, res){
     });
   });
 };
-exports.updateUserRecipes = (req, res) => {
+exports.updateUserRecipes = function(req, res) {
   User.findOne({ _id: req.session.user })
   .exec(function(err, user) {
     var newRecipe = {
       title: req.body.title, 
+      directions: req.body.directions,
+      ingredients: req.body.ingredients
     }
     user.set('recipes', user.recipes.concat(newRecipe));
     console.log(user)
@@ -95,9 +97,9 @@ exports.updateUserRecipes = (req, res) => {
         res.sessor.error = err;
       } else {
         req.session.msg = 'User Updated.';
-        req.session.recipes = user.recipes
+        req.session.data = user;
       }
-      res.redirect('/user');
+      res.redirect('/');
     });
   });
 };

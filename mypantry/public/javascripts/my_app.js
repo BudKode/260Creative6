@@ -6,6 +6,7 @@ angular.module('myApp', []).
       $scope.user = data;
       $scope.error = "";
       $scope.recipes = data.recipes;
+      console.log(data)
     }).
     error(function(data, status, headers, config) {
       $scope.user = {};

@@ -28,20 +28,24 @@
     <div id='main-body' ng-controller="myController">
       <div class="form-container" ng-controller="myController">
         <p id="sectionTitle" class="form-header">Add a recipe</p>
-        <form method="POST" action="/user/updateUserRecipes">
+        <form method="POST" action="/user/updateRecipes">
             <label style="margin-right: 44px;">Title:</label>
-            <input type="text" id="title" name="title" ng-model="title" ><br>
-            <!--<label>Ingredients:</label>-->
-            <!--<textarea cols="40" rows="5" id="ingredients" name="ingredients" ng-model="recipe.ingredients"></textarea><br>-->
-            <!--<label style="margin-right: 10px;">Directions:</label>-->
-            <!--<textarea cols="40" rows="5"id="directions" name="directions" ng-model="recipe.directions"></textarea><br> -->
+            <input type="text" id="title" name="title" ><br>
+            <label>Ingredients:</label>
+            <textarea cols="40" rows="5" id="ingredients" name="ingredients" ng-model="recipe.ingredients"></textarea><br>
+            <label style="margin-right: 10px;">Directions:</label>
+            <textarea cols="40" rows="5"id="directions" name="directions" ng-model="recipe.directions"></textarea><br> 
                
             <input type="submit" id="save" value="Save">
         </form>
     </div>
       <h3 style="margin-top: 30px;">My recipes</h3>
      <div>
-       <div ng-repeat="x in recipes">{{x.title}}</div>
+       <div style="width: 600px; height: 120px; box-shadow: 1px 1px 7px #999; margin-bottom: 20px; padding: 18px;" ng-repeat="x in user.recipes">
+         <div> Title: {{x.title}}</div>
+         <div>Ingredients: {{x.ingredients}}</div>
+         <div>Directions: {{x.directions}}</div>
+       </div>
      </div>
     <hr>
     <div id="indexMsg" class="text-center">
